@@ -6,8 +6,6 @@
 
 // You may assume each function in the array accepts one integer as input and returns one integer as output.
 
- 
-
 // Example 1:
 // Input: functions = [x => x + 1, x => x * x, x => 2 * x], x = 4
 // Output: 65
@@ -36,18 +34,14 @@
 
 ///<>========================answer==================================<>
 
-
-var compose = function(functions) {
-    
-	return function(x) {
-        for(let i=functions.length-1;i>=0;i--){
-            x=functions[i](x)
+var compose = function (functions) {
+    return function (x) {
+        for (let i = functions.length - 1; i >= 0; i--) {
+            x = functions[i](x);
         }
-        return x
-    }
+        return x;
+    };
 };
 
-
-  const fn = compose([x => x + 1, x => 2 * x])
-  fn(4) // 9
- 
+const fn = compose([(x) => x + 1, (x) => 2 * x]);
+fn(4); // 9
