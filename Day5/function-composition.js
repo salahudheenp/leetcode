@@ -33,3 +33,13 @@
 // Output: 42
 // Explanation:
 // The composition of zero functions is the identity function
+
+///<>========================answer==================================<>
+
+
+var compose = function(functions) {
+    
+    return function(x) {
+        
+    }
+};
